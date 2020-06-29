@@ -7,7 +7,13 @@ const Stack = createStackNavigator<{ Home: undefined }>();
 export default () => {
   return (
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen
+        options={{
+          title: "Radio PPI Dunia",
+        }}
+        name="Home"
+        component={HomeScreen}
+      />
     </Stack.Navigator>
   );
 };
