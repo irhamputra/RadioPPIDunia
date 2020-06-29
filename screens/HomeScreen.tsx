@@ -4,14 +4,15 @@ import {
   ActivityIndicator,
   SafeAreaView,
   ScrollView,
-  Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import { Sound } from "expo-av/build/Audio/Sound";
 import { StatusBar } from "expo-status-bar";
 import BottomSheet from "reanimated-bottom-sheet";
-import { Button } from "react-native-elements";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Text } from "react-native-elements";
+import BoxMenuIcon from "../components/BoxMenuIcon";
 
 export default () => {
   const [soundObj, setSoundObj] = React.useState<{
@@ -66,12 +67,27 @@ export default () => {
     }
   };
 
-  if (loading) return <ActivityIndicator size="large" />;
+  if (loading)
+    return (
+      <View
+        style={{
+          flex: 1,
+          flexGrow: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <>
+          <ActivityIndicator size="large" />
+          <Text>Mohon Tunggu...</Text>
+        </>
+      </View>
+    );
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView contentContainerStyle={{ padding: 10, flex: 1 }}>
-        <Text>Home Screen</Text>
+        <BoxMenuIcon />
       </ScrollView>
 
       <BottomSheet
@@ -92,27 +108,17 @@ export default () => {
             >
               <View>
                 <Text style={{ fontWeight: "bold", color: "white" }}>
-                  Now Playing
+                  Now Playing:
                 </Text>
-                <Text style={{ color: "white" }}>
-                  SSK Raka - UGD (Unit Galau Darurat)
-                </Text>
+                <Text style={{ color: "white" }}>Airplay Radio PPI Dunia</Text>
               </View>
               {!isPlaying ? (
                 <TouchableOpacity onPress={playAudio}>
-                  <Text
-                    style={{ color: "white", fontWeight: "bold", fontSize: 24 }}
-                  >
-                    Play
-                  </Text>
+                  <MaterialIcons name="play-arrow" size={32} color="white" />
                 </TouchableOpacity>
               ) : (
                 <TouchableOpacity onPress={pauseAudio}>
-                  <Text
-                    style={{ color: "white", fontWeight: "bold", fontSize: 24 }}
-                  >
-                    Pause
-                  </Text>
+                  <MaterialIcons name="pause" size={32} color="white" />
                 </TouchableOpacity>
               )}
             </View>
