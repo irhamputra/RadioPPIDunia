@@ -11,3 +11,9 @@ web-build/
 
 # macOS
 .DS_Store
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/rpd-expo.iml
+/.idea/vcs.xml
+/yarn-error.log
