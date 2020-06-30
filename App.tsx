@@ -33,7 +33,7 @@ export default function App() {
           <Tab.Screen
             options={{
               tabBarIcon: ({ size, color }) => (
-                <MaterialIcons name="home" size={size} color={color} />
+                <MaterialIcons name="home" size={size + 3} color={color} />
               ),
             }}
             name="HomeTab"
@@ -42,7 +42,7 @@ export default function App() {
           <Tab.Screen
             options={{
               tabBarIcon: ({ size, color }) => (
-                <MaterialIcons name="forum" size={size} color={color} />
+                <MaterialIcons name="forum" size={size + 3} color={color} />
               ),
             }}
             name="ChatBoxTab"
@@ -52,7 +52,11 @@ export default function App() {
           <Tab.Screen
             options={{
               tabBarIcon: ({ size, color }) => (
-                <MaterialIcons name="date-range" size={size} color={color} />
+                <MaterialIcons
+                  name="date-range"
+                  size={size + 3}
+                  color={color}
+                />
               ),
             }}
             name="ScheduleTab"
@@ -61,7 +65,11 @@ export default function App() {
           <Tab.Screen
             options={{
               tabBarIcon: ({ size, color }) => (
-                <MaterialIcons name="library-music" size={size} color={color} />
+                <MaterialIcons
+                  name="library-music"
+                  size={size + 3}
+                  color={color}
+                />
               ),
             }}
             name="PodcastTab"
@@ -70,7 +78,7 @@ export default function App() {
           <Tab.Screen
             options={{
               tabBarIcon: ({ size, color }) => (
-                <MaterialIcons name="face" size={size} color={color} />
+                <MaterialIcons name="menu" size={size + 3} color={color} />
               ),
             }}
             name="ProfileTab"

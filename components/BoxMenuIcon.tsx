@@ -29,8 +29,8 @@ const BoxMenuIcon: React.FC = () => {
       >
         <MenuIcon name="radio" navigation={navigate} text="Live!" />
         <MenuIcon name="queue-music" navigation={navigate} text="Request" />
-        <MenuIcon name="person" navigation={navigate} text="SS & SK" />
-        <MenuIcon name="stop" navigation={navigate} text="Quiz" />
+        <MenuIcon name="group" navigation={navigate} text="SS & SK" />
+        <MenuIcon name="insert-chart" navigation={navigate} text="Chart" />
       </View>
     </View>
   );
